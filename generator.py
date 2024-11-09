@@ -18,7 +18,7 @@ def generate(gen):
         validnumbers = list(range(1,26))
         open('sets/rotors/current_settings.json','w').write(dumps([choice(validnumbers),choice(validnumbers),choice(validnumbers)],indent=4, sort_keys=True))
     elif gen == 'a' or gen == 'b' or gen == 'c' or gen == 'reflector':
-        for a in alphabet:
+        for a in list(alphabet):
             c = choice(alphabet)
             data[a] = c
             alphabet.remove(c)
